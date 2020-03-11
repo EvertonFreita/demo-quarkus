@@ -1,30 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@EvertonFreita 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-rodrigofujioka
-/
-demo-quarkus
-1
-138
- Code Issues 3 Pull requests 0 Actions Projects 0 Wiki Security Insights
-demo-quarkus/.circleci/config.yml
-@rodrigofujioka rodrigofujioka #10 - ajuste target version fail to 1.8
-4081337 18 days ago
-71 lines (65 sloc)  2.51 KB
-  
-#
-# Native Quarkus CircleCI configuration file
-#
 version: 2
 jobs:
   build:
@@ -49,9 +22,9 @@ jobs:
       # ########################
       - restore_cache:
           keys:
-            - v1-quarkus-fuji-{{ checksum "pom.xml" }}
+            - v1-quarkus-evert-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-quarkus-fuji-
+            - v1-quarkus-evert-
 
       # Download maven dependencies so that we can cache them
       # ########################
@@ -62,7 +35,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-          key: v1-quarkus-fuji-{{ checksum "pom.xml" }}
+          key: v1-quarkus-evert-{{ checksum "pom.xml" }}
 
       # Standard maven build and test phases - does not perform a native build (or verify)
       # ########################
@@ -93,15 +66,3 @@ jobs:
       #    name: Verify (Native)
       #    command: ./mvnw verify -Pnative
       #    no_output_timeout: 30m
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
