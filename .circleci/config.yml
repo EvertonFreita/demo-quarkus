@@ -49,9 +49,9 @@ jobs:
       # ########################
       - restore_cache:
           keys:
-            - v1-quarkus-evert-{{ checksum "pom.xml" }}
+            - v1-quarkus-fuji-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-quarkus-evert-
+            - v1-quarkus-fuji-
 
       # Download maven dependencies so that we can cache them
       # ########################
@@ -62,7 +62,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-          key: v1-quarkus-evert-{{ checksum "pom.xml" }}
+          key: v1-quarkus-fuji-{{ checksum "pom.xml" }}
 
       # Standard maven build and test phases - does not perform a native build (or verify)
       # ########################
