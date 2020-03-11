@@ -10,14 +10,15 @@ Explore
 Learn Git and GitHub without any code!
 Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
 
-evertonfreita
+
+rodrigofujioka
 /
 demo-quarkus
 1
 138
  Code Issues 3 Pull requests 0 Actions Projects 0 Wiki Security Insights
 demo-quarkus/.circleci/config.yml
-@everrtonfreita evertonfreita #10 - ajuste target version fail to 1.8
+@rodrigofujioka rodrigofujioka #10 - ajuste target version fail to 1.8
 4081337 18 days ago
 71 lines (65 sloc)  2.51 KB
   
@@ -48,9 +49,9 @@ jobs:
       # ########################
       - restore_cache:
           keys:
-            - v1-quarkus-fuji-{{ checksum "pom.xml" }}
+            - v1-quarkus-evert-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-quarkus-fuji-
+            - v1-quarkus-evert-
 
       # Download maven dependencies so that we can cache them
       # ########################
